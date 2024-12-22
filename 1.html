@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resistor Colour Code Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo">
+            BM <span>DOT</span> LK
+        </div>
+
+        <h1>Resistor Colour Code Calculator</h1>
+
+        <div class="input-group">
+            <label for="first-color">First Colour (Digit)</label>
+            <select id="first-color" onchange="updateColorDisplay()">
+                <option value="0" data-color="#000000">Black (0)</option>
+                <option value="1" data-color="#7F3F00">Brown (1)</option>
+                <option value="2" data-color="#D50000">Red (2)</option>
+                <option value="3" data-color="#FF6A00">Orange (3)</option>
+                <option value="4" data-color="#FFEE00">Yellow (4)</option>
+                <option value="5" data-color="#00D500">Green (5)</option>
+                <option value="6" data-color="#0000FF">Blue (6)</option>
+                <option value="7" data-color="#8A2BE2">Violet (7)</option>
+                <option value="8" data-color="#808080">Gray (8)</option>
+                <option value="9" data-color="#FFFFFF">White (9)</option>
+            </select>
+            <div class="color-box" id="first-color-box"></div>
+        </div>
+
+        <div class="input-group">
+            <label for="second-color">Second Colour (Digit)</label>
+            <select id="second-color" onchange="updateColorDisplay()">
+                <option value="0" data-color="#000000">Black (0)</option>
+                <option value="1" data-color="#7F3F00">Brown (1)</option>
+                <option value="2" data-color="#D50000">Red (2)</option>
+                <option value="3" data-color="#FF6A00">Orange (3)</option>
+                <option value="4" data-color="#FFEE00">Yellow (4)</option>
+                <option value="5" data-color="#00D500">Green (5)</option>
+                <option value="6" data-color="#0000FF">Blue (6)</option>
+                <option value="7" data-color="#8A2BE2">Violet (7)</option>
+                <option value="8" data-color="#808080">Gray (8)</option>
+                <option value="9" data-color="#FFFFFF">White (9)</option>
+            </select>
+            <div class="color-box" id="second-color-box"></div>
+        </div>
+
+        <div class="input-group">
+            <label for="multiplier-color">Multiplier Colour</label>
+            <select id="multiplier-color" onchange="updateColorDisplay()">
+                <option value="1" data-color="#000000">Black (x1)</option>
+                <option value="10" data-color="#7F3F00">Brown (x10)</option>
+                <option value="100" data-color="#D50000">Red (x100)</option>
+                <option value="1000" data-color="#FF6A00">Orange (x1,000)</option>
+                <option value="10000" data-color="#FFEE00">Yellow (x10,000)</option>
+                <option value="100000" data-color="#00D500">Green (x100,000)</option>
+                <option value="1000000" data-color="#0000FF">Blue (x1,000,000)</option>
+                <option value="10000000" data-color="#8A2BE2">Violet (x10,000,000)</option>
+                <option value="100000000" data-color="#808080">Gray (x100,000,000)</option>
+                <option value="1000000000" data-color="#FFFFFF">White (x1,000,000,000)</option>
+            </select>
+            <div class="color-box" id="multiplier-color-box"></div>
+        </div>
+
+        <button onclick="calculateResistorValue()">Calculate Resistor Value</button>
+
+        <div id="result"></div>
+
+        <div id="resistor-colours">
+            <h3>Resistor Colour Bands</h3>
+            <div id="bands"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
